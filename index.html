@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Infográfico interativo sobre a população quilombola no Brasil.">
+  <title>Quilombos do Brasil | Mapa interativo</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-content">
+      <span class="eyebrow">TERRITÓRIO • HISTÓRIA • RESISTÊNCIA</span>
+      <h1>Quilombos <em>do Brasil</em></h1>
+      <p>Conheça a presença da população quilombola no território brasileiro e a importância de sua história e cultura.</p>
+      <a class="hero-link" href="#mapa">Explorar o mapa <span>↓</span></a>
+    </div>
+    <div class="hero-mark" aria-hidden="true">Q</div>
+  </header>
+
+  <main>
+    <section class="stats" aria-label="Dados nacionais">
+      <article class="stat-card">
+        <span class="stat-label">População quilombola</span>
+        <strong>1.330.186</strong>
+        <small>pessoas no Brasil</small>
+      </article>
+      <article class="stat-card">
+        <span class="stat-label">Participação na população</span>
+        <strong>0,65%</strong>
+        <small>da população brasileira</small>
+      </article>
+      <article class="stat-card">
+        <span class="stat-label">Região com maior população</span>
+        <strong>Nordeste</strong>
+        <small>906.337 pessoas</small>
+      </article>
+    </section>
+
+    <section class="section-heading" id="mapa">
+      <div>
+        <span class="section-kicker">01 / DISTRIBUIÇÃO TERRITORIAL</span>
+        <h2>Explore o mapa</h2>
+        <p>Selecione um estado para conhecer sua região e consultar os dados regionais.</p>
+      </div>
+      <span class="map-hint">Clique em um estado ↗</span>
+    </section>
+
+    <section class="map-layout">
+      <div class="map-panel">
+        <div id="map" role="application" aria-label="Mapa interativo dos estados brasileiros"></div>
+        <div class="map-legend">
+          <span><i class="legend-dot nordeste"></i> Nordeste</span>
+          <span><i class="legend-dot sudeste"></i> Sudeste</span>
+          <span><i class="legend-dot norte"></i> Norte</span>
+          <span><i class="legend-dot centro"></i> Centro-Oeste</span>
+          <span><i class="legend-dot sul"></i> Sul</span>
+        </div>
+      </div>
+      <aside class="info-panel" aria-live="polite">
+        <span class="section-kicker">ESTADO SELECIONADO</span>
+        <h3 id="state-name">Brasil</h3>
+        <p id="state-description">Clique em qualquer estado no mapa para visualizar sua região e os dados correspondentes.</p>
+        <div class="info-divider"></div>
+        <span class="info-label">População quilombola da região</span>
+        <strong class="region-number" id="region-population">1.330.186</strong>
+        <span class="info-foot" id="region-name">Total nacional — Censo 2022</span>
+        <p class="data-note">Os números apresentados nesta página são totais regionais. Eles não representam a população de cada estado individualmente.</p>
+      </aside>
+    </section>
+
+    <section class="chart-section">
+      <div class="section-heading compact">
+        <div>
+          <span class="section-kicker">02 / OS NÚMEROS</span>
+          <h2>População por região</h2>
+          <p>Distribuição das pessoas quilombolas segundo o Censo Demográfico 2022.</p>
+        </div>
+      </div>
+      <div class="chart-card">
+        <div class="chart-wrap"><canvas id="regionChart" aria-label="Gráfico da população quilombola por região"></canvas></div>
+        <div class="chart-caption">O Nordeste concentra aproximadamente 68,1% da população quilombola recenseada no país.</div>
+      </div>
+    </section>
+
+    <section class="history-section">
+      <div class="history-copy">
+        <span class="section-kicker">03 / MEMÓRIA E IDENTIDADE</span>
+        <h2>O que são quilombos?</h2>
+        <p>Quilombos são comunidades formadas historicamente por pessoas negras que resistiram à escravização e construíram formas próprias de organização, trabalho, cultura e vida coletiva.</p>
+        <p>Atualmente, as comunidades quilombolas mantêm vínculos com seus territórios, tradições, ancestralidade e modos de vida. O reconhecimento de seus direitos territoriais é parte importante da luta por igualdade e justiça histórica.</p>
+      </div>
+      <div class="quote-card">
+        <span class="quote-mark">“</span>
+        <p>Território também é memória, identidade e pertencimento.</p>
+        <span class="quote-credit">QUILOMBOS DO BRASIL</span>
+      </div>
+    </section>
+
+    <section class="sources">
+      <span class="section-kicker">04 / SAIBA MAIS</span>
+      <h2>Fontes e referências</h2>
+      <ul>
+        <li><a href="https://www.ibge.gov.br/" target="_blank" rel="noopener">IBGE — Censo Demográfico 2022: Quilombolas</a></li>
+        <li><a href="https://quilombos.ibge.gov.br/" target="_blank" rel="noopener">IBGE — Brasil Quilombola</a></li>
+        <li><a href="https://www.gov.br/palmares/pt-br" target="_blank" rel="noopener">Fundação Cultural Palmares</a></li>
+      </ul>
+      <p class="method-note">Dados populacionais regionais apresentados conforme a divulgação do Censo 2022. O mapa colore os estados por região; a cor não indica quantidade de comunidades ou população em cada estado.</p>
+    </section>
+  </main>
+
+  <footer>
+    <span>QUILOMBOS DO BRASIL</span>
+    <span>Um panorama de território, história e resistência.</span>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

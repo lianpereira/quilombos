@@ -1,0 +1,17 @@
+PROJETO: QUILOMBOS DO BRASIL
+
+COMO EXECUTAR
+1. Extraia a pasta do arquivo ZIP.
+2. Abra a pasta no Visual Studio Code.
+3. Abra o index.html usando a extensão Live Server (recomendado).
+   Também é possível abrir o index.html diretamente no navegador.
+
+IMPORTANTE
+- O mapa e as bibliotecas são carregados pela internet.
+- O mapa colore os estados por região, não por quantidade de quilombos.
+- Ao clicar em um estado, o painel mostra a população quilombola da REGIÃO inteira.
+- Os dados regionais são: Norte 167.311; Nordeste 906.337; Centro-Oeste 44.997;
+  Sudeste 182.427; Sul 29.114. Total: 1.330.186.
+- Dados populacionais: Censo Demográfico 2022, IBGE.
+- Antes de entregar o trabalho, confira os números e acrescente a identificação
+  do aluno, turma e demais exigências do professor.
